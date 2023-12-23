@@ -2,4 +2,4 @@
 
 | 插件                                                                                                                         | 介绍                                                                    |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| [@latejs/fetch-event-source](./packages/fetch-event-source/README.md)                                        | 基于fetch 获取流式数据                                            |
+| [@latelyjs/fetch-event-source](./packages/fetch-event-source/README.md)                                        | 基于fetch 获取流式数据                                            |

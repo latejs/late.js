@@ -1,7 +1,7 @@
 {
-  "name": "late.js",
+  "name": "lately.js",
   "version": "0.0.1",
-  "description": "late.js",
+  "description": "lately.js",
   "scripts": {
     "release": "npx changeset",
     "publish": "npx changeset publish",

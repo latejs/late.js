@@ -5,13 +5,13 @@
 ### Install
 
 ```sh
-npm install @latejs/fetch-event-source
+npm install @latelyjs/fetch-event-source
 ```
 
 ### Usage
 
 ```ts
-import { fetchEventSource } from '@latejs/fetch-event-source';
+import { fetchEventSource } from '@latelyjs/fetch-event-source';
 
 await fetchEventSource('/api/sse', {
     onmessage(msg) {
@@ -23,7 +23,7 @@ await fetchEventSource('/api/sse', {
 ### Example
 
 ```ts
-import { fetchEventSource, EventStreamContentType} from '@latejs/fetch-event-source';
+import { fetchEventSource, EventStreamContentType} from '@latelyjs/fetch-event-source';
 
 const controller = new AbortController();
 

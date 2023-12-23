@@ -1,5 +1,5 @@
 {
-  "name": "@latejs/fetch-event-source",
+  "name": "@latelyjs/fetch-event-source",
   "version": "0.0.1",
   "description": "fetch-event-source",
   "preferGlobal": true,
@@ -17,8 +17,7 @@
     "types.d.ts"
   ],
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "access": "public"
   },
   "keywords": [
     "fetch-event-source"
