@@ -48,7 +48,7 @@ lately help
 
 ### 配置文件
 
-更目录创建  lately.config.ts
+根目录创建  lately.config.ts
 
 ```ts
 
