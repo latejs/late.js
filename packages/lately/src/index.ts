@@ -1,4 +1,4 @@
-import pkg from '../package.json';
+// import pkg from '../package.json';
 // import checkNodeVersion from './utils/check-node-version';
 import { initCli } from './cli';
 import { defineConfig, UserConfig } from './service/config';
