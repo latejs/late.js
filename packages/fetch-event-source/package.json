@@ -1,6 +1,6 @@
 {
   "name": "@latelyjs/fetch-event-source",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "fetch-event-source",
   "preferGlobal": true,
   "main": "dist/index.js",
