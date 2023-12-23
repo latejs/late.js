@@ -8,6 +8,11 @@
   },
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/latelyjs/lately.js/tree/main/packages/lately",
+    "directory": "packages/fetch-event-source"
+  },
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup src/index.ts --env.NODE_ENV production",
