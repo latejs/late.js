@@ -7,7 +7,7 @@ import { EsbuildPlugin } from 'esbuild-loader';
 import { merge } from 'webpack-merge';
 import { CustomStatsPlugin } from './plugins/custom-stats-plugin';
 import { compressionPlugin } from './plugins/compression-webpack-plugin';
-import { imageMinimizerPlugin } from './plugins/image-minimizer-webpack-plugin';
+// import { imageMinimizerPlugin } from './plugins/image-minimizer-webpack-plugin';
 import { copyWebpackPlugin } from './plugins/copy-webpack-plugin';
 import { baseConfig } from './base';
 import { IsDev, getEnv } from './env';
@@ -22,17 +22,7 @@ const config = (): Configuration => {
             new TerserWebpackPlugin({
               parallel: true,
               extractComments: false,
-
               terserOptions: {
-                ecma: 5,
-                keep_classnames: false,
-                keep_fnames: false,
-                safari10: true,
-                sourceMap: false,
-                mangle: true,
-                format: {
-                  comments: false,
-                },
                 compress: IsDev()
                   ? {}
                   : {
@@ -62,7 +52,7 @@ const config = (): Configuration => {
       minimizer: [
         ...changeEsbuildMini,
         new JsonMinimizerPlugin(),
-        imageMinimizerPlugin(),
+        // imageMinimizerPlugin(),
       ],
     },
     cache: {
