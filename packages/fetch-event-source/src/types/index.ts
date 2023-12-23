@@ -17,6 +17,8 @@ export interface FetchEventSourceInit extends RequestInit {
   onfinally?: () => void;
   // 成功完成
   onfinish?: () => void;
+  // 监听line
+  oncustomline?:()=>void
 }
 
 export enum EventKey {
