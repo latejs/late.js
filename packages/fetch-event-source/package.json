@@ -1,0 +1,31 @@
+{
+  "name": "@latejs/fetch-event-source",
+  "version": "0.0.1",
+  "description": "fetch-event-source",
+  "preferGlobal": true,
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup src/index.ts --env.NODE_ENV production",
+    "lint": "eslint --fix --ext .ts,.tsx src",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "files": [
+    "dist",
+    "bin",
+    "types.d.ts"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "fetch-event-source"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
