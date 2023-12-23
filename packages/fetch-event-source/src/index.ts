@@ -49,7 +49,7 @@ export async function fetchEventSource(
 
                 lines.forEach((line: string) => {
                   if (line?.trim()?.length > 0) {
-                    options?.oncustomline?.();
+                    options?.oncustomline?.(line);
                     if (
                       line.indexOf(EventKey.Data) === -1 &&
                       line.indexOf(EventKey.Event) === -1 &&
