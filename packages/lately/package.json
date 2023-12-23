@@ -1,5 +1,5 @@
 {
-  "name": "@latelyjs/cli",
+  "name": "@latelyjs/lately",
   "version": "0.0.1",
   "description": "前端脚手架cli",
   "preferGlobal": true,

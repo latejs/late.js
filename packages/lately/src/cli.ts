@@ -8,6 +8,7 @@ import log from './utils/log';
 const initCli = async () => {
   // 显示版本号
   program.version(pkg.version);
+
   // 启动开发服务器
   program
     .command('dev')
