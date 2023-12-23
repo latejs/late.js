@@ -1,13 +1,13 @@
 {
   "name": "@latelyjs/fetch-event-source",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "fetch-event-source",
   "preferGlobal": true,
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/latelyjs/lately.js.git",
+    "url": "git+https://github.com/latelyjs/lately.js/tree/main/packages/fetch-event-source",
     "directory": "packages/fetch-event-source"
   },
   "scripts": {

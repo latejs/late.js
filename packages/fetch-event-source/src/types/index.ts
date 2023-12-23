@@ -2,7 +2,7 @@ export interface EventSourceMessage {
   data?: string;
 }
 
-export const EventStreamContentType = "text/event-stream";
+export const EventStreamContentType = 'text/event-stream';
 
 export interface FetchEventSourceInit extends RequestInit {
   // 打开
@@ -15,15 +15,17 @@ export interface FetchEventSourceInit extends RequestInit {
   onerror?: (err: any) => number | null | undefined | void;
   // 无论成功失败都会进来
   onfinally?: () => void;
+  // 成功完成
+  onfinish?: () => void;
 }
 
 export enum EventKey {
-  Data = "data:",
-  Event = "event:",
-  Id = "id:",
-  EventAdd = "event:add",
-  EventMessage = "event:message",
-  EventFinish = "event:finish",
-  EventError = "event:error",
-  eventErrorHandle = "event:errorhandle",
+  Data = 'data:',
+  Event = 'event:',
+  Id = 'id:',
+  EventAdd = 'event:add',
+  EventMessage = 'event:message',
+  EventFinish = 'event:finish',
+  EventError = 'event:error',
+  eventErrorHandle = 'event:errorhandle',
 }

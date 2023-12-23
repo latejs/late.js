@@ -3,9 +3,9 @@ import {
   EventStreamContentType,
   EventSourceMessage,
   EventKey,
-} from "./types";
+} from './types';
 
-import { parseLine } from "./parse";
+import { parseLine } from './parse';
 
 export async function fetchEventSource(
   input: RequestInfo,
@@ -16,19 +16,20 @@ export async function fetchEventSource(
       ...options,
     });
 
-    const contentType = response.headers.get("content-type");
+    const contentType = response.headers.get('content-type');
 
     // 打开
     options?.onopen?.(response);
 
     if (
       !response.ok ||
-      !response.headers.get("content-type")?.startsWith("text/event-stream") ||
+      !response.headers.get('content-type')?.startsWith('text/event-stream') ||
       response.status !== 200
     ) {
-      return options?.onerror?.(response);
+      options?.onerror?.(response);
+      return options?.onfinally?.();
     }
-    if (response.ok && contentType === "text/event-stream") {
+    if (response.ok && contentType === 'text/event-stream') {
       const reader = response?.body?.getReader();
       let buffer: any;
       new ReadableStream({
@@ -38,11 +39,12 @@ export async function fetchEventSource(
               ?.read()
               .then(({ done, value }) => {
                 if (done) {
+                  options?.onfinish?.();
                   return options?.onfinally?.();
                 }
-                const chunk = new TextDecoder("utf-8").decode(value);
+                const chunk = new TextDecoder('utf-8').decode(value);
                 buffer += chunk;
-                const lines = buffer?.split("\n");
+                const lines = buffer?.split('\n');
                 buffer = lines?.pop?.();
 
                 lines.forEach((line: string) => {
@@ -105,11 +107,11 @@ export async function fetchEventSource(
         },
       });
     } else {
-      options?.onerror?.("Unexpected response or content type");
+      options?.onerror?.('Unexpected response or content type');
       options?.onfinally?.();
     }
   } catch (e: any) {
-    if (e?.name === "AbortError") {
+    if (e?.name === 'AbortError') {
       options?.onclose?.();
     }
     options?.onerror?.(e);
